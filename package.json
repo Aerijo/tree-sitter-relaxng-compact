@@ -5,8 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/Aerijo/tree-sitter-relaxng-compact",
   "bugs": "https://github.com/Aerijo/tree-sitter-relaxng-compact/issues",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Benjamin Gray",
   "license": "MIT",
   "dependencies": {
