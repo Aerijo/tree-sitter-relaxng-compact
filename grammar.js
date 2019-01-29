@@ -27,7 +27,7 @@ module.exports = grammar({
 
     literal: $ => seq($.literal_segment, repeat("~", $.literal_segment)),
 
-    literal_segment: $ => choice(
+    literal_segment: _ => choice(
       seq("\"", /[^\"\n]*/, "\""),
       seq("'", /[^\'\n]*/, "'"),
       // TODO: Triple quotes
@@ -63,17 +63,17 @@ module.exports = grammar({
 
     any_uri_literal: $ => $.literal,
 
-    inherit: _ => /\w+/,
+    inherit: _ => /\w+/, // TODO
 
     datatype_name: $ => $.identifier,
 
     param: $ => seq($._id_or_keyword, "=", $.literal),
 
-    datatype_value: _ => prec(8, /\w+/),
+    datatype_value: _ => prec(8, /\w+/), // TODO
 
     exceptpattern: $ => seq("-", $.pattern),
 
-    name_class: _ => /\S+/,
+    name_class: _ => /\S+/, // TODO
 
     grammar_content: $ => prec.left(choice(
       $.start,
