@@ -1,0 +1,21 @@
+=====
+Comment
+=====
+
+# Hello world
+
+-----
+
+(top_level (comment))
+
+=====
+Namespace
+=====
+
+start =
+  element bcf:controlfile {
+    attribute version { xsd:string {minLength="1"}}
+  }
+
+-----
+

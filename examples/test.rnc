@@ -1,0 +1,23 @@
+namespace bcf = "https://sourceforge.net/projects/biblatex"
+
+start =
+  element bcf:controlfile {
+    # This is usually the same as the biblatex version string but not necessarily.
+    # Sometimes the BCF format version doesn't change between biblatex releases
+    attribute version { xsd:string {minLength="1"}},
+    attribute bltxversion { xsd:string {minLength="1"}},
+
+    # "Global" Biber options. It's not clear what a non-global biber option
+    # would be but just in case, we have the option ...
+    element bcf:options {
+      attribute component { "biber" },
+      attribute type { "global" },
+      output_encoding,
+      input_encoding,
+      debug,
+      mincrossrefs,
+      minxrefs,
+      sortcase,
+      sortupper
+    }
+  }

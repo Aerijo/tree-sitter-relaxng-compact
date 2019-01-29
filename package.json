@@ -1,0 +1,27 @@
+{
+  "name": "tree-sitter-relaxng-compact",
+  "version": "0.5.0",
+  "description": "Tree sitter grammar for RELAX NG (compact)",
+  "main": "index.js",
+  "repository": "https://github.com/Aerijo/tree-sitter-relaxng-compact",
+  "bugs": "https://github.com/Aerijo/tree-sitter-relaxng-compact/issues",
+  "keywords": [
+  ],
+  "author": "Benjamin Gray",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.11.0",
+    "prebuild-install": "^5.0.0"
+  },
+  "devDependencies": {
+    "prebuild": "^7.6.1",
+    "tree-sitter-cli": "^0.13.5"
+  },
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "install": "prebuild-install || node-gyp rebuild",
+    "pre-build": "prebuild --all --strip --verbose",
+    "pre-build:upload": "prebuild --upload-all",
+    "test": "tree-sitter test && tree-sitter parse examples -q -t"
+  }
+}
