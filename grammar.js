@@ -19,9 +19,9 @@ module.exports = grammar({
 
     _id_or_keyword: $ => choice($.keyword, $.identifier),
 
-    keyword: _ => choice("foo", "bar"),
+    keyword: _ => choice("foo", "bar"), // TODO
 
-    identifier: _ => /[a-zA-Z:_]+/,
+    identifier: _ => /[a-zA-Z:_]+/, // TODO
 
     namespace_uri_literal: $ => choice("inherit", $.literal),
 
